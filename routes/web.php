@@ -14,3 +14,16 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+/**
+ * Routes for resource users-controller
+ */
+
+/**
+ * Routes for resource users
+ */
+$router->get('users', 'UsersController@all');
+$router->get('users/{id}', 'UsersController@get');
+$router->post('users', 'UsersController@add');
+$router->put('users/{id}', 'UsersController@put');
+$router->delete('users/{id}', 'UsersController@remove');

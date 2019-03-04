@@ -48,6 +48,9 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Register Middleware
@@ -82,6 +85,10 @@ $app->singleton(
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
+
+$app->register(Jenssegers\Mongodb\MongodbServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
+$app->withEloquent();
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
